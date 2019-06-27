@@ -1,7 +1,7 @@
-FROM alpine:3.9
+FROM alpine:3.10
 MAINTAINER kusanagi@prime-strategy.co.jp
 
-RUN apk add --no-cache tar mariadb-client postgresql-client \
+RUN apk add --no-cache tar mariadb-client postgresql-client git \
 && addgroup -g 1000 kusanagi \
 && adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi
 
@@ -15,7 +15,7 @@ RUN if [ x${MICROSCANNER_TOKEN} != x ] ; then \
 	&& chmod +x microscanner \
 	&& ./microscanner ${MICROSCANNER_TOKEN} || exit 1\
 	&& rm ./microscanner \
-	&& apk del --purge --virtual .ca ;\
+	&& apk del --purge .ca ;\
     fi
 
 USER kusanagi
