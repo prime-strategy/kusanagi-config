@@ -1,9 +1,9 @@
-FROM alpine:3.13.3
+FROM alpine:3.13.4
 LABEL maintainer="kusanagi@prime-strategy.co.jp"
 
 RUN apk add --no-cache tar mariadb-client postgresql-client git \
-&& addgroup -g 1000 kusanagi \
-&& adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi
+    && addgroup -g 1000 kusanagi \
+    && adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi
 
 COPY files/my.cnf /etc/my.cnf 
 
