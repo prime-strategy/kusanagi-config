@@ -8,10 +8,10 @@ RUN apk add --no-cache tar mariadb-client postgresql-client git \
 COPY files/my.cnf /etc/my.cnf 
 
 RUN apk add --no-cache --virtual .curl curl \
-	&& TRIVY_VERSION=0.16.0 \
-	&& curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v$TRIVY_VERSION \
+	&& curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin \
     && trivy filesystem --exit-code 1 --no-progress / \
     && apk del .curl \
+    && rm /usr/local/bin/trivy \
     && :
 
 USER kusanagi
