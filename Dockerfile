@@ -1,4 +1,4 @@
-FROM alpine:3.13.5
+FROM alpine:3.14.0
 LABEL maintainer="kusanagi@prime-strategy.co.jp"
 
 COPY files/my.cnf /etc/my.cnf 
