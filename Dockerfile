@@ -4,7 +4,7 @@ LABEL maintainer="kusanagi@prime-strategy.co.jp"
 COPY files/my.cnf /etc/my.cnf 
 
 RUN apk update \
-    && apk upgrade curl \
+    && apk upgrade apk-tools \
     && apk add --no-cache tar mariadb-client postgresql-client git \
     && addgroup -g 1000 kusanagi \
     && adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi \
