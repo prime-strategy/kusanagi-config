@@ -1,11 +1,11 @@
-FROM alpine:3.15.1
+FROM alpine:3.15.3
 LABEL maintainer="kusanagi@prime-strategy.co.jp"
 
 COPY files/my.cnf /etc/my.cnf 
 
 RUN apk update \
     && apk update \
-    && apk upgrade libretls \
+    && apk upgrade \
     && apk add --no-cache tar mariadb-client postgresql-client git \
     && addgroup -g 1000 kusanagi \
     && adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi \
