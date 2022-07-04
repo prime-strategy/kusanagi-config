@@ -9,7 +9,7 @@ else
     DOCKERFILE_PATH_ARG="-f $DOCKERFILE_PATH"
 fi
 
--docker buildx create \
+docker buildx create \
     --name builder \
     --driver docker-container \
     --platform linux/amd64,linux/arm64,linux/ppc64le,linux/s390x \
