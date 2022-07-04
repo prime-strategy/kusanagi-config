@@ -2,7 +2,7 @@
 set -eu
 export DOCKER_CLI_EXPERIMENTAL=enabled
 export DOCKER_BUILDKIT=1
-echo "Using BUILD_INFO=${BUILD_INFO}"
+#echo "Using BUILD_INFO=${BUILD_INFO}"
 docker buildx build \
     --platform linux/amd64,linux/arm64,linux/ppc64le,linux/s390x \
     --progress plain --load \
