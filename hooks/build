@@ -22,4 +22,3 @@ docker buildx build \
     $DOCKERFILE_PATH_ARG \
     -t $IMAGE_NAME \
     --push .
-docker manifest inspect --verbose docker.io/$IMAGE_NAME
