@@ -1,4 +1,4 @@
-FROM alpine:3.16.0
+FROM --platform=$BUILDPLATFORM alpine:3.16.0
 LABEL maintainer="kusanagi@prime-strategy.co.jp"
 
 COPY files/my.cnf /etc/my.cnf 
@@ -10,7 +10,7 @@ RUN apk update \
     && apk update \
     && apk upgrade libssl1.1 libcrypto1.1 \
     && apk add --no-cache --virtual .curl curl \
-	&& curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /tmp \
+    && curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /tmp \
     && /tmp/trivy filesystem --skip-files /tmp/trivy --exit-code 1 --no-progress / \
     && apk del .curl \
     && rm /tmp/trivy \

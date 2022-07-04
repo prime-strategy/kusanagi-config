@@ -10,11 +10,11 @@ expat-2.4.8-r0
 git-2.36.1-r0
 libacl-2.3.1-r0
 libc-utils-0.7.2-r3
-libcrypto1.1-1.1.1o-r0
-libcurl-7.83.1-r1
+libcrypto1.1-1.1.1p-r0
+libcurl-7.83.1-r2
 libgcc-11.2.1_git20220219-r2
 libpq-14.4-r0
-libssl1.1-1.1.1o-r0
+libssl1.1-1.1.1p-r0
 libstdc++-11.2.1_git20220219-r2
 mariadb-client-10.6.8-r0
 mariadb-common-10.6.8-r0
