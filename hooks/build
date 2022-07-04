@@ -22,3 +22,4 @@ docker buildx build \
     $DOCKERFILE_PATH_ARG \
     -t $IMAGE_NAME \
     --push .
+docker manifest instpect --verbose $IMAGE_NAME

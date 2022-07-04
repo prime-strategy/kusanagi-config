@@ -1,9 +1,6 @@
 FROM --platform=$BUILDPLATFORM alpine:3.16.0
 LABEL maintainer="kusanagi@prime-strategy.co.jp"
 
-ARG TARGETPLATFORM
-ARG BUILDPLATFORM
-RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM"
 COPY files/my.cnf /etc/my.cnf 
 
 RUN apk update \
