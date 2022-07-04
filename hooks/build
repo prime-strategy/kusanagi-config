@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eu
+set -eux
 
 export DOCKER_CLI_EXPERIMENTAL=enabled
 export DOCKER_BUILDKIT=1
@@ -17,6 +17,7 @@ docker buildx create \
     --platform linux/amd64,linux/arm64,linux/ppc64le,linux/s390x \
     --use
 docker buildx inspect --bootstrap
+docker buildx ls
 docker buildx build \
     --platform linux/amd64,linux/arm64,linux/ppc64le,linux/s390x \
     --progress plain \
