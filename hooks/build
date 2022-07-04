@@ -9,13 +9,10 @@ else
     DOCKERFILE_PATH_ARG="-f $DOCKERFILE_PATH"
 fi
 
-export DOCKER_CLI_EXPERIMENTAL=enabled
-export DOCKER_BUILDKIT=1
-docker buildx create \
-    --name builder \
-    --driver docker-container \
-    --platform linux/amd64,linux/arm64,linux/ppc64le,linux/s390x \
-    --use
+docker buildx create --use    --name builder node-amd64
+docker buildx create --append --name builder node-arm64
+docker buildx create --append --name builder node-ppc64le
+docker buildx create --append --name builder node-s390x
 docker buildx inspect --bootstrap
 docker buildx ls
 docker buildx build \
