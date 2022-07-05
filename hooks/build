@@ -9,18 +9,19 @@ if [ "$DOCKERFILE_PATH" = "" ]; then
 else
     DOCKERFILE_PATH_ARG="-f $DOCKERFILE_PATH"
 fi
+export ARCHITECTURES=linux/amd64,linux/arm64
 
 docker buildx create \
     --name $BUILDER \
     --driver docker-container \
-    --platform linux/amd64,linux/i386,linux/arm64,linux/arm/v6,linux/arm/v7,linux/ppc64le,linux/s390x \
+    --platform $ARCHITECTURES \
     --use
 docker buildx inspect --bootstrap
+docker buildx ls
 docker buildx use $BUILDER
 docker buildx build \
-    --platform linux/amd64,linux/i386,linux/arm64,linux/arm/v6,linux/arm/v7,linux/ppc64le,linux/s390x \
+    --platform $ARCHITECTURES \
     --progress plain \
     $DOCKERFILE_PATH_ARG \
     -t $IMAGE_NAME \
-    --push --no-cache --rm .
-docker buildx rm $BUILDER
+    --push .
