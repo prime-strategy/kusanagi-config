@@ -19,6 +19,10 @@ docker buildx create \
 docker buildx inspect --bootstrap
 docker buildx ls
 docker buildx build \
+    --progress plain \
+    $DOCKERFILE_PATH_ARG \
+    -t $IMAGE_NAME .
+docker buildx build \
     --platform $ARCHITECTURES \
     --progress plain \
     $DOCKERFILE_PATH_ARG \
