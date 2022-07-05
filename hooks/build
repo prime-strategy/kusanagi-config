@@ -12,7 +12,7 @@ fi
 docker buildx create \
     --name builder \
     --driver docker-container \
-    --platform linux/amd64,linux/arm64,linux/ppc64le,linux/s390x \
+    --platform linux/amd64,linux/i386,linux/arm64,linux/arm/v6,linux/arm/v7,linux/ppc64le,linux/s390x \
     --use
 docker buildx inspect --bootstrap
 docker buildx ls
@@ -22,8 +22,8 @@ docker buildx build \
     -t $IMAGE_NAME \
     .
 docker buildx build \
-    --platform linux/amd64,linux/arm64,linux/ppc64le,linux/s390x \
+    --platform linux/i386,linux/arm64,linux/arm/v6,linux/arm/v7,linux/ppc64le,linux/s390x \
     --progress plain \
     $DOCKERFILE_PATH_ARG \
     -t $IMAGE_NAME \
-    --push .
+    --push . || true
