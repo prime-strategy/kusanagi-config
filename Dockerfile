@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM alpine:3.16.1
+FROM --platform=$BUILDPLATFORM alpine:3.16.2
 LABEL maintainer="kusanagi@prime-strategy.co.jp"
 
 COPY files/my.cnf /etc/my.cnf 
