@@ -3,7 +3,7 @@
 configuration container image for KUSANAGI RoD.
 
 ## Versions(tags)
-- 1.0.6-r8
+- 1.0.6-r9
 
 ## Image Content
 - Alpine Linux:3.16.2

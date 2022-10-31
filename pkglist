@@ -6,12 +6,12 @@ brotli-libs-1.0.9-r6
 busybox-1.35.0-r17
 ca-certificates-20220614-r0
 ca-certificates-bundle-20220614-r0
-expat-2.4.9-r0
+expat-2.5.0-r0
 git-2.36.3-r0
 libacl-2.3.1-r0
 libc-utils-0.7.2-r3
 libcrypto1.1-1.1.1q-r0
-libcurl-7.83.1-r3
+libcurl-7.83.1-r4
 libgcc-11.2.1_git20220219-r2
 libpq-14.5-r0
 libssl1.1-1.1.1q-r0
