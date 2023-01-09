@@ -5,7 +5,7 @@ COPY files/my.cnf /etc/my.cnf
 
 RUN : \
     && apk add --no-cache tar mariadb-client postgresql-client git \
-    && apk upgrade curl libssl1.1 libcrypto1.1 expat \
+    && apk upgrade curl libssl3 libcrypto3 expat \
     && addgroup -g 1000 kusanagi \
     && adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi \
     && apk add --no-cache --virtual .curl curl \

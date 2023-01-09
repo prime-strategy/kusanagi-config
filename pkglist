@@ -10,12 +10,12 @@ ca-certificates-bundle-20220614-r2
 git-2.38.2-r0
 libacl-2.3.1-r1
 libc-utils-0.7.2-r3
-libcrypto3-3.0.7-r0
+libcrypto3-3.0.7-r2
 libcurl-7.87.0-r0
 libexpat-2.5.0-r0
 libgcc-12.2.1_git20220924-r4
 libpq-15.1-r0
-libssl3-3.0.7-r0
+libssl3-3.0.7-r2
 libstdc++-12.2.1_git20220924-r4
 lz4-libs-1.9.4-r1
 mariadb-client-10.6.11-r0
