@@ -1,11 +1,18 @@
-FROM --platform=$BUILDPLATFORM alpine:3.17.0
+FROM --platform=$BUILDPLATFORM alpine:3.17.2
 LABEL maintainer="kusanagi@prime-strategy.co.jp"
 
 COPY files/my.cnf /etc/my.cnf 
 
 RUN : \
-    && apk add --no-cache tar mariadb-client postgresql-client git \
-    && apk upgrade curl libssl3 libcrypto3 expat \
+    && apk add --no-cache  \
+        tar \
+        mariadb-client \
+        postgresql-client \
+        git \
+        curl=7.87.0-r2 \
+        libssl3=3.0.8-r0 \
+        libcrypto3=3.0.8-r0 \
+        expat \
     && addgroup -g 1000 kusanagi \
     && adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi \
     && apk add --no-cache --virtual .curl curl \
