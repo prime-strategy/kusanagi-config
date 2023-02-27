@@ -5,7 +5,7 @@ COPY files/my.cnf /etc/my.cnf
 
 RUN : \
     && apk add --no-cache  \
-        tar \
+        tar=1.34-r2 \
         mariadb-client \
         postgresql-client \
         git \
