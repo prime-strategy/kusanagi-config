@@ -5,13 +5,13 @@ COPY files/my.cnf /etc/my.cnf
 
 RUN : \
     && apk add --no-cache  \
-        tar=1.34-r2 \
+        tar \
         mariadb-client \
         postgresql-client \
         git \
-        curl=7.88.1-r1 \
-        libssl3=3.0.8-r3 \
-        libcrypto3=3.0.8-r3 \
+        curl=8.0.1-r0 \
+        libssl3=3.0.8-r4 \
+        libcrypto3=3.0.8-r4 \
         expat \
     && addgroup -g 1000 kusanagi \
     && adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi \
