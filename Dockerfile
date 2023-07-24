@@ -9,9 +9,9 @@ RUN : \
         mariadb-client \
         postgresql-client \
         git \
-        curl=8.1.2-r0 \
-        libssl3=3.1.1-r1 \
-        libcrypto3=3.1.1-r1 \
+        curl=8.2.0-r1 \
+        libssl3=3.1.1-r3 \
+        libcrypto3=3.1.1-r3 \
         expat \
     && addgroup -g 1000 kusanagi \
     && adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi \
