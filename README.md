@@ -3,10 +3,10 @@
 configuration container image for KUSANAGI RoD.
 
 ## Versions(tags)
-- 1.0.8-r6
+- 1.0.9-r0
 
 ## Image Content
-- Alpine Linux:3.18.0
+- Alpine Linux:3.18.2
 - git: 2.38.5-r0
 - mariadb-client: 10.11.3-r0
 - mariadb-common: 10.11.3-r0
