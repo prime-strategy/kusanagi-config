@@ -10,8 +10,8 @@ RUN : \
         postgresql-client \
         git \
         curl=8.5.0-r0 \
-        libssl3=3.1.4-r5 \
-        libcrypto3=3.1.4-r5 \
+        libssl3=3.1.4-r6 \
+        libcrypto3=3.1.4-r6 \
         expat \
     && addgroup -g 1000 kusanagi \
     && adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi \
