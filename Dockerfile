@@ -5,6 +5,7 @@ COPY files/my.cnf /etc/my.cnf
 
 RUN : \
     && apk add --no-cache  \
+        busybox=1.36.1-r16 \
         tar \
         mariadb-client \
         postgresql-client \
