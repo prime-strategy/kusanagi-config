@@ -9,9 +9,10 @@ RUN : \
         mariadb-client \
         postgresql16-client \
         git \
+        busybox=1.36.1-r29 \
         curl=8.7.1-r0 \
-        libssl3=3.3.0-r2 \
-        libcrypto3=3.3.0-r2 \
+        libssl3=3.3.1-r0 \
+        libcrypto3=3.3.1-r0 \
         expat \
     && addgroup -g 1000 kusanagi \
     && adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi \
