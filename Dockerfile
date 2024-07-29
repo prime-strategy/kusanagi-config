@@ -10,9 +10,9 @@ RUN : \
         postgresql16-client \
         git \
         busybox=1.36.1-r29 \
-        curl=8.8.0-r0 \
-        libssl3=3.3.1-r1 \
-        libcrypto3=3.3.1-r1 \
+        curl=8.9.0-r0 \
+        libssl3=3.3.1-r3 \
+        libcrypto3=3.3.1-r3 \
         expat \
     && addgroup -g 1000 kusanagi \
     && adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi \
