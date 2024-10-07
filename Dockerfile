@@ -9,7 +9,7 @@ RUN : \
         mariadb-client \
         postgresql16-client \
         git \
-        libcurl=8.9.1-r1 \
+        libcurl=8.10.1-r0 \
         libssl3=3.3.2-r0 \
         libcrypto3=3.3.2-r0 \
         expat \
