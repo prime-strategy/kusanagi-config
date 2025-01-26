@@ -8,7 +8,7 @@ RUN : \
         tar \
         mariadb-client \
         postgresql16-client \
-        git \
+        git=2.48.1-r0 \
         libcurl=8.11.1-r0 \
         libssl3=3.3.2-r4 \
         libcrypto3=3.3.2-r4 \
