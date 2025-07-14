@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM alpine:3.21.3
+FROM --platform=$BUILDPLATFORM alpine:3.22.0
 LABEL maintainer="kusanagi@prime-strategy.co.jp"
 
 COPY files/my.cnf /etc/my.cnf 
@@ -9,9 +9,9 @@ RUN : \
         mariadb-client \
         postgresql16-client \
         git \
-        libcurl=8.12.1-r1 \
-        libssl3=3.3.3-r0 \
-        libcrypto3=3.3.3-r0 \
+        libcurl=8.14.1-r1 \
+        libssl3=3.5.1-r0 \
+        libcrypto3=3.5.1-r0 \
         expat \
     && addgroup -g 1000 kusanagi \
     && adduser -h /home/kusanagi -s /bin/false -u 1000 -G kusanagi -D kusanagi \
