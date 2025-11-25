@@ -4,7 +4,8 @@ LABEL maintainer="kusanagi@prime-strategy.co.jp"
 COPY files/my.cnf /etc/my.cnf 
 
 RUN : \
-    && apk add --no-cache  \
+    && apk upgrade busybox --no-cache \
+    && apk add --no-cache \
         tar \
         mariadb-client \
         postgresql16-client \
