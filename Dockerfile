@@ -10,6 +10,7 @@ RUN : \
         mariadb-client \
         postgresql16-client \
         git \
+        zlib=1.3.2-r0 \
         libcurl=8.17.0-r1 \
         libssl3=3.5.5-r0 \
         libcrypto3=3.5.5-r0 \
