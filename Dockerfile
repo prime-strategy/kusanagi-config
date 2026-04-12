@@ -5,9 +5,11 @@ COPY files/my.cnf /etc/my.cnf
 
 RUN : \
     && apk upgrade --no-cache \
+        musl \
+        musl-utils \
         busybox \
         curl \
-        libssl3 \
+        libcrypto3 \
         zlib \
     && apk add --no-cache \
         tar \
